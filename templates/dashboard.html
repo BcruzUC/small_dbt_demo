@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id="bar_chart" style="width:50%;height:50%;"></div>
+
+    <script>
+        var bar_chart_data = {{ bar_chart_json | safe }};
+        Plotly.plot('bar_chart', bar_chart_data.data, bar_chart_data.layout);
+    </script>
+</body>
+</html>
