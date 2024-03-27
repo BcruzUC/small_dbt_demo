@@ -14,7 +14,7 @@ total_income as (
     FROM payments sp
     LEFT JOIN orders so ON sp.order_id = so.id
     WHERE so.order_status = 'completed'
-    GROUP BY so.order_date;
+    GROUP BY so.order_date
 )
 
 select * from total_income
